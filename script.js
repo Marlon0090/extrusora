@@ -46,3 +46,20 @@ imagens.forEach((imagem) => {
             'perspective(1000px) rotateY(0) rotateX(0) translateY(0)';
     });
 });
+
+
+    function abrirCatalogo(){
+        document.getElementById("popupCatalogo").style.display = "flex";
+}
+
+    function fecharCatalogo(){
+        document.getElementById("popupCatalogo").style.display = "none";
+}
+
+    window.onclick = function(event){
+    const popup = document.getElementById("popupCatalogo");
+
+    if(event.target == popup){
+        popup.style.display = "none";
+    }
+}

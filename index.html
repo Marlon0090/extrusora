@@ -7,10 +7,27 @@
     <title>Sorocaba | Extrusão</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/Adobe Express - file.png">
 </head>
 
-<body>
 
+<body>
+    <!-- Popup Catálogo -->
+    <div id="popupCatalogo" class="popup-catalogo">
+        <div class="popup-content">
+            <span class="fechar" onclick="fecharCatalogo()">&times;</span>
+
+            <h2>📖 Catálogo</h2>
+
+            <p>
+                Fale com nosso vendedor e tenha acesso ao nosso catálogo completo.
+            </p>
+
+            <a href="https://wa.me/5515981490966" target="_blank" class="btn-whatsapp">
+                Falar com o vendedor
+            </a>
+        </div>
+    </div>
     <!-- MENU -->
     <header>
         <nav class="navbar">
@@ -31,9 +48,11 @@
                     </li>
 
                     <li>
-                        <a href="https://wa.me/5511999999999" target="_blank">
-                            Contato
+                        <a href="#" onclick="abrirCatalogo(); return false;">
+                            Catálogo
                         </a>
+                    </li>
+                    <li> <a href="https://wa.me/5515981490966" target="_blank"> Contato </a>
                     </li>
                 </ul>
 
@@ -133,59 +152,51 @@
     <!-- FOOTER -->
     <footer>
 
-    <div class="container footer-grid">
+        <div class="container footer-grid">
 
-        <div>
-            <h3>Endereço</h3>
+            <div>
+                <h3>Endereço</h3>
 
-            <p>
-                Rua Aureliano César do Nascimento, 475<br>
-                Iporanga - Sorocaba - SP
-            </p>
+                <p>
+                    Rua Aureliano César do Nascimento, 475<br>
+                    Iporanga - Sorocaba - SP
+                </p>
 
-            <iframe
-                src="https://www.google.com/maps?q=Rua+Aureliano+César+do+Nascimento,+475,+Iporanga,+Sorocaba,+SP&output=embed"
-                loading="lazy">
-            </iframe>
+                <iframe
+                    src="https://www.google.com/maps?q=Rua+Aureliano+César+do+Nascimento,+475,+Iporanga,+Sorocaba,+SP&output=embed"
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <div>
+                <h3>Contato</h3>
+
+                <a class="whatsapp" href="https://wa.me/5515981490966" target="_blank">
+
+                    📱 (15) 98149-0966
+
+                </a>
+            </div>
+
         </div>
 
-        <div>
-            <h3>Contato</h3>
+        <div class="copyright">
 
-            <a
-                class="whatsapp"
-                href="https://wa.me/5515981490966"
-                target="_blank">
+            <a href="https://www.instagram.com/marlon_patrick009/" target="_blank" class="desenvolvido-por">
 
-                📱 (15) 98149-0966
+                <img src="img/WhatsApp Image 2026-07-09 at 19.48.28.jpeg" alt="MP Tech" class="logo-mp">
+
+                <span>
+                    © 2026 Sorocaba Extrusão. Todos os direitos reservados.<br>
+                    Desenvolvido por <strong>MP Tech</strong>
+                </span>
 
             </a>
+
         </div>
 
-    </div>
-
-    <div class="copyright">
-
-    <a
-        href="https://www.instagram.com/marlon_patrick009/"
-        target="_blank"
-        class="desenvolvido-por">
-
-        <img
-            src="img/WhatsApp Image 2026-07-09 at 19.48.28.jpeg"
-            alt="MP Tech"
-            class="logo-mp">
-
-        <span>
-            © 2026 Sorocaba Extrusão. Todos os direitos reservados.<br>
-            Desenvolvido por <strong>MP Tech</strong>
-        </span>
-
-    </a>
-
-</div>
-
-</footer>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
