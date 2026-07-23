@@ -5019,7 +5019,39 @@ h1.entry-title {
     position: relative;
     width: auto
 }
+.menu-vertical {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    gap: 15px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+}
 
+.menu-vertical li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.menu-vertical a {
+    display: block !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.menu-vertical .elementor-icon-list-text {
+    color: #ffffff !important;
+}
+
+.menu-vertical li::marker {
+    display: none !important;
+}
+
+.menu-vertical .elementor-icon-list-item:after {
+    display: none !important;
+}
 .elementor-widget .elementor-icon-list-items {
     list-style-type: none;
     margin: 0;
@@ -10840,8 +10872,8 @@ a.elementor-item.elementor-gallery-title.elementor-item-active {
 
 .elementor-115 .elementor-element.elementor-element-1a367826:not(.elementor-motion-effects-element-type-background),
 .elementor-115 .elementor-element.elementor-element-1a367826>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-image: url("https://minatex.com.br/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-31-at-13.46.05.jpeg");
-    background-position: 0px 205px;
+    background-image: url("img/ChatGPT\ Image\ 22\ de\ jul.\ de\ 2026\,\ 17_52_47.png");
+    background-position: center -350px;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -12600,7 +12632,7 @@ body.rtl .elementor-115 .elementor-element.elementor-element-2c961780 {
 
 .elementor-115 .elementor-element.elementor-element-40b6cef9:not(.elementor-motion-effects-element-type-background),
 .elementor-115 .elementor-element.elementor-element-40b6cef9>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-image: url("https://minatex.com.br/wp-content/uploads/2026/03/IMG_7262-scaled.jpeg");
+    background-image: url("img/fundo\ sem\ logo.png");
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12869,13 +12901,14 @@ body.rtl .elementor-115 .elementor-element.elementor-element-2c961780 {
 
 .elementor-115 .elementor-element.elementor-element-4d04f4f {
     width: auto;
-    max-width: auto;
+    max-width: none;
     padding: 0em 0em 1em 0em;
 }
 
 .elementor-115 .elementor-element.elementor-element-4d04f4f img {
     width: 100%;
-    height: 45px;
+    height: 280px;
+    max-height: 280px;
     object-fit: contain;
     object-position: center center;
 }
@@ -48926,4 +48959,39 @@ body .elementskit-team-popup svg {
 
 .ti-rss-alt:before {
     content: "\e75f";
+}
+.mp-tech-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+}
+
+.copyright-text {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.developed-by {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.developed-by img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.developed-by span {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.developed-by strong {
+    font-weight: 700;
+    color: #ffffff;
 }
