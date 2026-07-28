@@ -48995,3 +48995,63 @@ body .elementskit-team-popup svg {
     font-weight: 700;
     color: #ffffff;
 }
+/* Centraliza todo o rodapé */
+.elementor-element-999502 {
+    text-align: center;
+}
+
+.elementor-element-999502 .elementor-container {
+    justify-content: center;
+}
+
+.elementor-element-999502 .elementor-widget-wrap {
+    align-items: center;
+}
+
+.elementor-element-999502 img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Links Úteis */
+.menu-vertical {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.menu-vertical li {
+    margin: 8px 0;
+}
+
+.menu-vertical a {
+    text-decoration: none;
+}
+
+/* Rodapé MP Tech */
+.mp-tech-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.developed-by {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.developed-by img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.copyright-text {
+    display: block;
+    line-height: 1.8;
+}
