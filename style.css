@@ -49214,4 +49214,27 @@ body .elementskit-team-popup svg {
         visibility: hidden !important;
     }
 
+}@media (max-width: 767px) {
+
+    .elementor-element-40b6cef9 {
+        background: #f2f2f2 !important;
+        width: 100% !important;
+    }
+
+    .elementor-element-40b6cef9 .elementor-background-overlay {
+        background: #f2f2f2 !important;
+        opacity: 1 !important;
+    }
+
+    .elementor-element-40b6cef9 .elementor-element-4668cdad {
+        background: transparent !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .elementor-element-40b6cef9 .elementor-container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
 }
