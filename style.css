@@ -5956,7 +5956,9 @@ h1.entry-title {
     border-radius: 500px;
     -o-object-fit: cover;
     object-fit: cover;
-    width: 100px
+    object-position: center 20%;
+    width: 100px;
+    height: 100px;
 }
 
 .elementor-author-box__text {
@@ -9337,9 +9339,9 @@ a.elementor-item.elementor-gallery-title.elementor-item-active {
     border-radius: 999px;
     box-sizing: content-box;
     -o-object-fit: cover;
-    object-fit: cover
+    object-fit: cover;
+    object-position: center top;
 }
-
 .elementor-testimonial__footer,
 .elementor-testimonial__header {
     display: flex
