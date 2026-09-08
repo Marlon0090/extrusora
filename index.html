@@ -24,6 +24,60 @@
 
         /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
     </style>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menu = document.querySelector(".menu-mobile");
+    const botao = document.querySelector(".menu-toggle");
+
+    if (!menu || !botao) {
+        return;
+    }
+
+    botao.addEventListener("click", function () {
+
+        menu.classList.toggle("active");
+
+        const aberto = menu.classList.contains("active");
+
+        botao.setAttribute(
+            "aria-expanded",
+            aberto ? "true" : "false"
+        );
+
+        botao.setAttribute(
+            "aria-label",
+            aberto ? "Fechar menu" : "Abrir menu"
+        );
+
+    });
+
+
+    // Fecha o menu ao clicar em um link
+    const links = menu.querySelectorAll(".menu-links a");
+
+    links.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            menu.classList.remove("active");
+
+            botao.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            botao.setAttribute(
+                "aria-label",
+                "Abrir menu"
+            );
+
+        });
+
+    });
+
+});
+</script>
 
 
     <style id="wp-block-library-inline-css">
@@ -966,6 +1020,7 @@
         :where(pre) {
             overflow-x: auto
         }
+        
 
         /*# sourceURL=https://minatex.com.br/wp-content/themes/twentytwentyfive/style.min.css */
     </style>
@@ -1148,6 +1203,80 @@
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 </head>
+<body>
+
+    <!-- todo o conteúdo do site -->
+
+
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <button id="backToTop" aria-label="Voltar ao topo">
+        ↑
+    </button>
+
+    <style>
+        #backToTop {
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            #backToTop {
+                display: flex;
+                position: fixed;
+                right: 20px;
+                bottom: 20px;
+                width: 46px;
+                height: 46px;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                border-radius: 50%;
+                background: #fff;
+                color: #222;
+                font-size: 26px;
+                font-weight: bold;
+                cursor: pointer;
+                box-shadow: 0 4px 15px rgba(0,0,0,.25);
+                z-index: 999999;
+                opacity: 0;
+                visibility: hidden;
+                transition: .3s ease;
+            }
+
+            #backToTop.show {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const button = document.getElementById("backToTop");
+
+            if (!button) return;
+
+            window.addEventListener("scroll", function () {
+
+                if (window.innerWidth <= 767 && window.scrollY > 200) {
+                    button.classList.add("show");
+                } else {
+                    button.classList.remove("show");
+                }
+
+            });
+
+            button.addEventListener("click", function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+
+        });
+    </script>
+
+</body>
 
 <body
     class="home wp-singular page-template page-template-elementor_canvas page page-id-115 wp-embed-responsive wp-theme-twentytwentyfive elementor-default elementor-template-canvas elementor-kit-71 elementor-page elementor-page-115">
@@ -1242,6 +1371,21 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="menu-mobile">
+
+    <button class="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="menu-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#produtos">Produtos</a>
+        <a href="https://wa.me/5515981490966" target="_blank">Contato</a>
+    </nav>
+
+</div>
                                 <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-5c913666"
                                     data-id="5c913666" data-element_type="column" data-e-type="column">
                                     <div class="elementor-widget-wrap elementor-element-populated">
@@ -1259,6 +1403,7 @@
                 </div>
             </div>
         </section>
+        
         <section
             class="elementor-section elementor-top-section elementor-element elementor-element-1a367826 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
             data-id="1a367826" data-element_type="section" data-e-type="section"
